@@ -8,7 +8,7 @@ const ParagraphComponent = () => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.90", "start 0.4"],
+    offset: ["start 0.8", "start 0.5"],
   });
 
   const words = Content.split(" ");
@@ -16,17 +16,17 @@ const ParagraphComponent = () => {
   return (
     <div>
       <div>
-        <p ref={element} className="flex flex-wrap leading-none   ">
+        <p ref={element} className="flex flex-wrap leading-none justify-start   ">
           {words.map((word, idx) => {
             const start = idx / words.length;
             const end = start + 1 / words.length;
-            console.warn("start", start, "end", end);
+           
             /* const opacity = useTransform(scrollYProgress, [start, end], [0, 1]); */
             const char = word.split("");
             const amount = end - start;
             const step = amount / char.length;
             return (
-              <span className="mr-2  mt-2 leading-10 font-semibold text-2xl">
+              <span className={`mr-2  lg:mt-2 leading-10 font-semibold lg:text-2xl ${idx===0 ?' ml-40':''}`}>
                 {/* ------Character Map */}
                 {char.map((ch, idx) => {
                   const cstart = start + step * idx;
