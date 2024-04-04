@@ -11,13 +11,13 @@ const AnimateButton = () => {
     <div>
       <div>
         <button
-          className={`relative bg-white text-black xl:w-[13%] lg:w-[20%] md:w-[27%] w-1/2 py-3 rounded-lg `}
+          className={`relative bg-white text-black xl:w-[13%] lg:w-[20%] md:w-[27%] w-[60%] py-3 rounded-lg  `}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
           <motion.svg
            
-            className={` xl:w-[22%] h-[80%] md:w-[22%] w-[24%] rounded-full absolute right-2 bottom-1 transition-colors transform duration-500   border-2 border-[rgb(56,39,199)] ${
+            className={`  xl:w-[22%] h-[80%] md:w-[22%] w-[24%] rounded-full absolute right-2 bottom-1 transition-colors transform duration-500   border-2 border-[rgb(56,39,199)] ${
               hoverbutton ? "bg-white" : "bg-[rgb(56,39,199)]"
             }`}
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const AnimateButton = () => {
                   >
                     <g opacity="1" transform="matrix(1,0,0,1,0,0)">
                       {/* -------------Draw Line---------------------------------- */}
-                      <motion.path
+                      <motion.path 
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         fill-opacity="0"
@@ -92,7 +92,7 @@ const AnimateButton = () => {
                           duration: 0.5,
                           ease: "easeInOut",
                           repeat: Infinity,
-                          repeatDelay: 2,
+                          repeatDelay: 1,
                         }} // Animation duration and easing
                       ></motion.path>
                     </g>
@@ -115,7 +115,7 @@ const AnimateButton = () => {
                             duration: 0.6,
                             ease: "easeInOut",
                             repeat:Infinity,
-                            repeatDelay:2,
+                            repeatDelay:1,
                           }, // Rotate with duration 1 second
                         },
                       }}
@@ -136,7 +136,7 @@ const AnimateButton = () => {
                           duration: 0.5,
                           ease: "easeInOut",
                           repeat: Infinity,
-                          repeatDelay: 2,
+                          repeatDelay: 1,
                         }}
                       ></motion.path>
                     </motion.g>
