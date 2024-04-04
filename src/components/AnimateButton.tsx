@@ -149,7 +149,7 @@ const AnimateButton = () => {
               </g>
             </g>
           </motion.svg>
-          <div className=" text-start pl-3 ">
+          <div className=" text-start md:pl-4 pl-6  ">
             <div className="overflow-hidden h-7 ">
               <motion.div
                 initial={{ y: "0%" }}
