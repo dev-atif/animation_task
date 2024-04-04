@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url(https://db.onlinewebfonts.com/c/d1a580023d40c546276decde1c711e60?family=SuisseIntl-Bold);
 body{
-    font-family: sans-serif;
+   font-family: "SuisseIntl-Bold";
 }
